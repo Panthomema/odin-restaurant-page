@@ -4,7 +4,12 @@ import menu from "./menu";
 import contact from "./contact";
 
 const content = document.querySelector("#content");
-content.replaceChildren(about());
+
+const aboutContent = about();
+const menuContent = menu();
+const contactContent = contact();
+
+content.replaceChildren(aboutContent);
 
 document.querySelector("#about").addEventListener("click", (event) => {
   clearActualStyles();
@@ -13,7 +18,7 @@ document.querySelector("#about").addEventListener("click", (event) => {
   // add ViewTransitions fallback
 
   document.startViewTransition(() => {
-    content.replaceChildren(about());
+    content.replaceChildren(aboutContent);
   });
 });
 
@@ -24,7 +29,7 @@ document.querySelector("#menu").addEventListener("click", (event) => {
   // add ViewTransitions fallback
 
   document.startViewTransition(() => {
-    content.replaceChildren(menu());
+    content.replaceChildren(menuContent);
   });
 });
 
@@ -35,7 +40,7 @@ document.querySelector("#contact").addEventListener("click", (event) => {
   // add ViewTransitions fallback
 
   document.startViewTransition(() => {
-    content.replaceChildren(contact());
+    content.replaceChildren(contactContent);
   });
 });
 

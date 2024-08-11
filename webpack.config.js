@@ -29,9 +29,6 @@ module.exports = {
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
-        options: {
-          esModule: true,
-        }
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -40,6 +37,10 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
+      },
+      {
+        test: /\.json$/,
+        type: 'json', 
       },
     ],
   },

@@ -1,8 +1,7 @@
 import image from "../assets/images/about.png";
 
 export default function about() {
-  const about = document.createElement("div");
-  about.setAttribute("id", "about-content");
+  const content = document.createElement("div");
 
   const firstRow = document.createElement("p");
   firstRow.innerHTML =
@@ -24,10 +23,9 @@ export default function about() {
     "we can't serve, your meal is on the house!";
   
   const greeting = document.createElement("p");
-
   greeting.textContent = "(◠‿◠)";
 
-  about.append(firstRow, imgElement, secondRow, greeting);
+  content.append(firstRow, imgElement, secondRow, greeting);
 
-  return about;
+  return content;
 }

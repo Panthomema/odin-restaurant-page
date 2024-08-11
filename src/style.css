@@ -145,7 +145,10 @@ header h1 {
 }
 
 img {
+  border: 2px solid #ffffffc4;
+  /*
   mask-image: radial-gradient(ellipse, #ffffff 80%, #ffffff00 100%);
+  */
 }
 
 #content {
@@ -184,10 +187,22 @@ img {
   animation-delay: 0.5s;
 }
 
-#about-content {
+#content > div {
   display: flex;
   flex-direction: column;
   gap: 3em;
+}
+
+#plates {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2em;
+}
+
+#plates div {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 footer {

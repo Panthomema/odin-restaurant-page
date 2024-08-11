@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Galactic Shushi",
+    "image": {
+      "fileName": "galactic-shushi.png",
+      "alt": "Sushi platter with glowing algae, meteorite rice, and stardust-infused fish on a black nebula-designed plate"
+    },
+    "description": "Cosmic sushi with glowing ingredients and stardust"
+  },
+  {
+    "name": "Eternal Flame Steak",
+    "image": {
+      "fileName": "eternal-flame-steak.jpg",
+      "alt": "Seared steak with glowing vegetables, surrounded by small flames on a plate blending metal and stone"
+    },
+    "description": "Steak with glowing vegetables and eternal flames"
+  },
+  {
+    "name": "Elemental Soup",
+    "image": {
+      "fileName": "elemental-soup.jpg",
+      "alt": "Elemental soup with water broth, fiery spices, earth vegetables, and misty air rising from a sleek bowl"
+    },
+    "description": "Elemental soup blending water, fire, earth, air"
+  },
+  {
+    "name": "Dreamscapes Pasta",
+    "image": {
+      "fileName": "dreamscapes-pasta.jpg",
+      "alt": "Surreal pasta with color-changing noodles and swirling sauces, set on a dreamlike, ethereal plate"
+    },
+    "description": "Pasta with shifting colors and dreamlike sauces"
+  },
+  {
+    "name": "Rainbow Cloud Salad",
+    "image": {
+      "fileName": "rainbow-cloud-salad.jpg",
+      "alt": "Colorful cloud salad with rainbow vinaigrette, floating above a translucent, ethereal plate"
+    },
+    "description": "Floating cloud salad with rainbow drizzle"
+  },
+  {
+    "name": "Chrono Braised Lamb",
+    "image": {
+      "fileName": "chrono-braised-lamb.jpg",
+      "alt": "Tender lamb marinated in time, served with ancient spices and modern garnishes on an ornate plate"
+    },
+    "description": "Time-marinated lamb with historic flavors"
+  },
+  {
+    "name": "Quantum Quiche",
+    "image": {
+      "fileName": "quantum-quiche.jpg",
+      "alt": "Quantum quiche with shifting flavors and textures, presented on a sleek plate with swirling patterns"
+    },
+    "description": "Quiche with dynamic, shifting flavors"
+  },
+  {
+    "name": "Infinity Pizza",
+    "image": {
+      "fileName": "infinity-pizza.jpg",
+      "alt": "Infinity pizza with diverse, surreal toppings, served on an infinite-loop plate in a vibrant setting"
+    },
+    "description": "Pizza with surreal, universe-inspired slices"
+  },
+  {
+    "name": "Phoenix Ramen",
+    "image": {
+      "fileName": "phoenix-ramen.jpg",
+      "alt": "Ramen with regenerating noodles, a phoenix egg, and flavor-changing broth in a magical, glowing bowl"
+    },
+    "description": "Ramen with regenerating noodles and phoenix egg"
+  },
+  {
+    "name": "Ephemeral Dessert",
+    "image": {
+      "fileName": "ephemeral-dessert.jpg",
+      "alt": "Ephemeral dessert as a shimmering orb that dissolves into flavor, set on an elegant, glowing plate"
+    },
+    "description": "Shimmering orb dessert that dissolves instantly"
+  }
+]
