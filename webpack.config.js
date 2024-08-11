@@ -29,6 +29,9 @@ module.exports = {
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
+        options: {
+          esModule: true,
+        }
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,

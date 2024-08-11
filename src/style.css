@@ -136,6 +136,10 @@ button:hover {
   transform: scale(0.9);
 }
 
+.actual {
+  color: var(--color-btn-actual);
+}
+
 header h1 {
   font-size: 3em;
 }
@@ -144,7 +148,7 @@ header h1 {
   width: 90%;
   max-width: 600px;
   height: 1000px;
-  padding: 1em;
+  padding: 2em;
 
   background: #ffffff;
   background: radial-gradient(
@@ -159,6 +163,24 @@ header h1 {
   backdrop-filter: blur(0.3em);
   box-shadow: 0 0.2em 0.8em rgba(0, 0, 0, 0.1);
 }
+
+#content > * {
+  view-transition-name: content;
+}
+
+::view-transition-group(root) {
+  animation: none;
+}
+
+::view-transition-group(content) {
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+
+::view-transition-new(content) {
+  animation-delay: 0.5s;
+}
+
 
 footer {
   font-size: 0.75rem;
