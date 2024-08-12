@@ -1,47 +1,37 @@
+import { createHtmlElement, greetingContent } from "./utils";
 import data from "./menu-data.json";
 
-/*
-let srcOut;
-const image = import(`../assets/images/${data[0].image.slug}`);
+export default function generateMenuContent() {
+  const content = createHtmlElement("div");
 
-image.then(({ default: src }) =>  { 
-  srcOut = src 
-});
+  const firstParagraph = createHtmlElement(
+    "p",
+    "You can choose between our <strong>most popular</strong> creations:"
+  );
 
-console.log(srcOut);
-
-const images = data.map((item) => import(item.image.src).then((image) => image));
-console.log(images);
-*/
-
-export default function menu() {
-  const content = document.createElement("div");
-
-  const textNodeOpening = document.createElement("p");
-  textNodeOpening.innerHTML =
-    "You can choose between our <strong>most popular</strong> creations:";
-
-  const plates = document.createElement("div");
+  const plates = createHtmlElement("div");
   plates.setAttribute("id", "plates");
 
+  // Create a card for each item in the menu
   const cards = data.map((item) => {
-    const card = document.createElement("div");
+    const card = createHtmlElement("div");
 
-    const imageContainer = document.createElement("div");
-    imageContainer.classList.add("image-container");
+    // Create an image container so the caption can be displayed on the image
+    const imageContainer = createHtmlElement("div", "", "image-container");
 
-    const image = document.createElement("img");
-
+    const image = createHtmlElement("img");
+    // Dynamically import the image (lazy loading)
     import(`../assets/images/plates/${item.image.fileName}`).then(
       ({ default: src }) => (image.src = src)
     );
-
     image.alt = item.image.alt;
 
-    const caption = document.createElement("p");
-    caption.classList.add("caption");
-    caption.classList.add("opacity-0");
-    caption.textContent = item.caption;
+    const caption = createHtmlElement(
+      "p",
+      item.caption,
+      "caption",
+      "opacity-0" // Hide the caption by default
+    );
 
     caption.addEventListener("click", () => {
       caption.classList.toggle("opacity-0");
@@ -49,8 +39,7 @@ export default function menu() {
 
     imageContainer.append(image, caption);
 
-    const name = document.createElement("p");
-    name.textContent = item.name;
+    const name = createHtmlElement("p", item.name);
 
     card.append(imageContainer, name);
 
@@ -59,14 +48,14 @@ export default function menu() {
 
   plates.append(...cards);
 
-  const textNodeEnding = document.createElement("p");
-  textNodeEnding.innerHTML =
-    "Or <strong>whatever</strong> that goes beyond your imagination...";
+  const lastParagraph = createHtmlElement(
+    "p",
+    "<strong>Or</strong> whatever that goes beyond your imagination..."
+  );
 
-  const greeting = document.createElement("p");
-  greeting.textContent = "(◠‿◠)";
+  const greeting = createHtmlElement("p", greetingContent);
 
-  content.append(textNodeOpening, plates, textNodeEnding, greeting);
+  content.append(firstParagraph, plates, lastParagraph, greeting);
 
   return content;
 }

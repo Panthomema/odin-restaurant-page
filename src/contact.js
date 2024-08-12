@@ -1,45 +1,50 @@
+import { createHtmlElement, greetingContent } from "./utils";
 import phoneIcon from "../assets/icons/phone.svg";
 import addressIcon from "../assets/icons/address.svg";
 import mailIcon from "../assets/icons/mail.svg";
 import image from "../assets/images/location.png";
 
 export default function contact() {
-  const content = document.createElement("div");
+  const content = createHtmlElement("div");
 
-  const phoneText = document.createElement("p");
-  phoneText.classList.add("icon-text");
-  phoneText.innerHTML = phoneIcon + "Infinity (TON) 618-0000";
+  const phoneText = createHtmlElement(
+    "p",
+    `${phoneIcon} Infinity (TON) 618-0000`,
+    "icon-text"
+  );
+  
+  const mailText = createHtmlElement(
+    "p",
+    `${mailIcon} contact@whatever.com`,
+    "icon-text"
+  );
 
-  const mailText = document.createElement("p");
-  mailText.classList.add("icon-text");
-  mailText.innerHTML = mailIcon + "contact@whatever.com";
-
-  const addressText = document.createElement("p");
-  addressText.classList.add("icon-text");
-  addressText.innerHTML =
-    addressIcon + "Event Horizon Plaza, TON-618, Core Sector";
+  const addressText = createHtmlElement(
+    "p",
+    `${addressIcon} Event Horizon Plaza, TON-618, Core Sector`,
+    "icon-text"
+  );
 
   const imgElement = document.createElement("img");
   imgElement.src = image;
-  imgElement.alt =
-    "Artistic depiction of the quasar TON-618 with a massive black hole, " +
-    "bright light emissions, and cosmic surroundings";
+  imgElement.alt = 
+    `Artistic depiction of the quasar TON-618 with a massive black hole, bright 
+    light emissions, and cosmic surroundings`;
 
-  const lastParagraph = document.createElement("p");
+  const paragraph = createHtmlElement(
+    "p",
+    `Located at the <strong>singularity</strong> — please account for time 
+    dilation and gravitational lensing during your visit`
+  );
 
-  lastParagraph.innerHTML =
-    "Located at the <strong>singularity</strong> — please account for time " +
-    "dilation and gravitational lensing during your visit";
-
-  const greeting = document.createElement("p");
-  greeting.textContent = "(◠‿◠)";
+  const greeting = createHtmlElement("p", greetingContent);
 
   content.append(
     phoneText,
     mailText,
     addressText,
     imgElement,
-    lastParagraph,
+    paragraph,
     greeting
   );
 
