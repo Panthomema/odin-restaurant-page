@@ -218,11 +218,25 @@ img {
   position: absolute;
   top: 0;
   height: 100%;
+  width: 100%;
   display: grid;
   place-items: center;
   padding: 1em;
   background: #ffffffcc;
   transition: opacity 0.2s ease;
+}
+
+.icon-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.icon-text svg {
+  width: 1.5em;
+  height: 1.5em;
+  fill: currentColor;
 }
 
 footer {
