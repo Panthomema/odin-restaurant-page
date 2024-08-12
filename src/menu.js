@@ -27,6 +27,9 @@ export default function menu() {
   const cards = data.map((item) => {
     const card = document.createElement("div");
 
+    const imageContainer = document.createElement("div");
+    imageContainer.classList.add("image-container");
+
     const image = document.createElement("img");
 
     import(`../assets/images/plates/${item.image.fileName}`).then(
@@ -35,10 +38,21 @@ export default function menu() {
 
     image.alt = item.image.alt;
 
+    const caption = document.createElement("p");
+    caption.classList.add("caption");
+    caption.classList.add("opacity-0");
+    caption.textContent = item.caption;
+
+    caption.addEventListener("click", () => {
+      caption.classList.toggle("opacity-0");
+    });
+
+    imageContainer.append(image, caption);
+
     const name = document.createElement("p");
     name.textContent = item.name;
 
-    card.append(image, name);
+    card.append(imageContainer, name);
 
     return card;
   });

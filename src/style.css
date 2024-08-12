@@ -199,10 +199,30 @@ img {
   gap: 2em;
 }
 
-#plates div {
+#plates > div {
   display: flex;
   flex-direction: column;
   gap: 1em;
+}
+
+.image-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.caption {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 1em;
+  background: #ffffffcc;
+  transition: opacity 0.2s ease;
 }
 
 footer {
