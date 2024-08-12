@@ -1,7 +1,7 @@
 import "./styles/style.css";
-import generateAboutContent from "./parts/about";
-import generateMenuContent from "./parts/menu";
-import generateContactContent from "./parts/contact";
+import generateAboutContent from "./tabs/about";
+import generateMenuContent from "./tabs/menu";
+import generateContactContent from "./tabs/contact";
 
 const content = document.querySelector("#content");
 
