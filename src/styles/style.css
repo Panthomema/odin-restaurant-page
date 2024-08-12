@@ -58,7 +58,7 @@
 
 @font-face {
   font-family: "3dumbregular";
-  src: url("../../assets/fonts/3dumb_regular_macroman/3Dumb-webfont.woff")
+  src: url("../assets/fonts/3dumb_regular_macroman/3Dumb-webfont.woff")
     format("woff");
   font-weight: normal;
   font-style: normal;
@@ -66,7 +66,7 @@
 
 @font-face {
   font-family: "2dumbregular";
-  src: url("../../assets/fonts/2dumb_regular_macroman/2Dumb-webfont.woff")
+  src: url("../assets/fonts/2dumb_regular_macroman/2Dumb-webfont.woff")
     format("woff");
   font-weight: normal;
   font-style: normal;
@@ -95,7 +95,7 @@ body {
   text-align: center;
   user-select: none;
 
-  background-image: url("../../assets/images/background.jpg");
+  background-image: url("../assets/images/background.jpg");
   background-size: cover;
   background-attachment: fixed;
 

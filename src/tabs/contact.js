@@ -1,8 +1,8 @@
 import { createHtmlElement, greetingContent } from "../utils";
-import phoneIcon from "../../assets/icons/phone.svg";
-import addressIcon from "../../assets/icons/address.svg";
-import mailIcon from "../../assets/icons/mail.svg";
-import image from "../../assets/images/location.png";
+import phoneIcon from "../assets/icons/phone.svg";
+import addressIcon from "../assets/icons/address.svg";
+import mailIcon from "../assets/icons/mail.svg";
+import image from "../assets/images/location.png";
 
 export default function contact() {
   const content = createHtmlElement("div");

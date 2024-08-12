@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkodin_restaurant_page=self.webpackChunkodin_restaurant_page||[]).push([[302],{302:(e,a,p)=>{e.exports=p.p+"c5eb23228dfec2df49bb.jpg"}}]);

@@ -5,7 +5,7 @@ module.exports = {
   entry: {
     app: './src/index.js',
   },
-  mode: 'development',
+  mode: 'production',
   devtool: 'inline-source-map',
   devServer: {
     static: './dist',
@@ -14,6 +14,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      favicon: './src/favicon.svg',
     }),
   ],
   output: {
