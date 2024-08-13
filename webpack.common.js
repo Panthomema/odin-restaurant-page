@@ -1,29 +1,20 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
-    app: './src/index.js',
-  },
-  mode: 'production',
-  devtool: 'inline-source-map',
-  devServer: {
-    static: './dist',
-    watchFiles: 'src/*',
+    app: "./src/index.js",
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
-      favicon: './src/favicon.svg',
+      template: "./src/template.html",
+      favicon: "./src/favicon.svg",
     }),
   ],
   output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: "[name].bundle.js",
+    path: path.resolve(__dirname, "dist"),
     clean: true,
-  },
-  optimization: {
-    runtimeChunk: 'single',
   },
   module: {
     rules: [
@@ -49,5 +40,4 @@ module.exports = {
       },
     ],
   },
-  
 };
