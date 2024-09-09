@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "The Odin Project - Restaurant Page Exercise",
   "main": "index.js",
-  "prettier": {
-    "singleQuote": true
-  },
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack serve --open --config webpack.dev.js",
