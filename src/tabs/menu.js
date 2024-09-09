@@ -6,7 +6,7 @@ export default function generateMenuContent() {
 
   const firstParagraph = createHtmlElement(
     "p",
-    "You can choose between our <strong>most popular</strong> creations:"
+    "You can choose between our <strong>most popular</strong> creations:",
   );
 
   const plates = createHtmlElement("div");
@@ -22,7 +22,7 @@ export default function generateMenuContent() {
     const image = createHtmlElement("img");
     // Dynamically import the image (lazy loading)
     import(`../assets/images/plates/${item.image.fileName}`).then(
-      ({ default: src }) => (image.src = src)
+      ({ default: src }) => (image.src = src),
     );
     image.alt = item.image.alt;
 
@@ -30,7 +30,7 @@ export default function generateMenuContent() {
       "p",
       item.caption,
       "caption",
-      "opacity-0" // Hide the caption by default
+      "opacity-0", // Hide the caption by default
     );
 
     caption.addEventListener("click", () => {
@@ -50,7 +50,7 @@ export default function generateMenuContent() {
 
   const lastParagraph = createHtmlElement(
     "p",
-    "<strong>Or</strong> whatever that goes beyond your imagination..."
+    "<strong>Or</strong> whatever that goes beyond your imagination...",
   );
 
   const greeting = createHtmlElement("p", greetingContent);

@@ -10,31 +10,30 @@ export default function contact() {
   const phoneText = createHtmlElement(
     "p",
     `${phoneIcon} Infinity (TON) 618-0000`,
-    "icon-text"
+    "icon-text",
   );
-  
+
   const mailText = createHtmlElement(
     "p",
     `${mailIcon} contact@whatever.com`,
-    "icon-text"
+    "icon-text",
   );
 
   const addressText = createHtmlElement(
     "p",
     `${addressIcon} Event Horizon Plaza, TON-618, Core Sector`,
-    "icon-text"
+    "icon-text",
   );
 
   const imgElement = document.createElement("img");
   imgElement.src = image;
-  imgElement.alt = 
-    `Artistic depiction of the quasar TON-618 with a massive black hole, bright 
+  imgElement.alt = `Artistic depiction of the quasar TON-618 with a massive black hole, bright 
     light emissions, and cosmic surroundings`;
 
   const paragraph = createHtmlElement(
     "p",
     `Located at the <strong>singularity</strong> — please account for time 
-    dilation and gravitational lensing during your visit`
+    dilation and gravitational lensing during your visit`,
   );
 
   const greeting = createHtmlElement("p", greetingContent);
@@ -45,7 +44,7 @@ export default function contact() {
     addressText,
     imgElement,
     paragraph,
-    greeting
+    greeting,
   );
 
   return content;
