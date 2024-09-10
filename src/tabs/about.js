@@ -1,5 +1,5 @@
-import { createHtmlElement, greetingContent } from '../utils';
 import image from '../assets/images/about.png';
+import { createHtmlElement, greetingContent } from '../utils';
 
 export default function generateAboutContent() {
   const content = createHtmlElement('div');

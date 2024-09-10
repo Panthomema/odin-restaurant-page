@@ -1,5 +1,5 @@
-import { createHtmlElement, greetingContent } from '../utils';
 import data from '../data/menu-data.json';
+import { createHtmlElement, greetingContent } from '../utils';
 
 export default function generateMenuContent() {
   const content = createHtmlElement('div');

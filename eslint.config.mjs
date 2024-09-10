@@ -1,22 +1,14 @@
+import js from '@eslint/js';
 import globals from 'globals';
-import pluginJs from '@eslint/js';
-import eslintConfigPrettier from 'eslint-config-prettier';
-import stylisticJs from '@stylistic/eslint-plugin-js';
 
 export default [
   { languageOptions: { globals: globals.browser } },
-  pluginJs.configs.recommended,
-  eslintConfigPrettier,
+  js.configs.recommended,
   {
     ignores: ['**/dist/*'],
   },
   {
-    plugins: {
-      '@stylistic/js': stylisticJs,
-    },
-    rules: {
-      '@stylistic/js/indent': ['error', 2],
-    },
+    rules: {},
   },
   {
     files: ['webpack.*'],

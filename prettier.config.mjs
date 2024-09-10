@@ -6,6 +6,15 @@
  */
 const config = {
   singleQuote: true,
+  overrides: [
+    {
+      files: '*.html',
+      options: {
+        tabWidth: 4,
+        printWidth: 100,
+      },
+    },
+  ],
 };
 
 export default config;

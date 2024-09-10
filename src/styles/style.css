@@ -146,9 +146,6 @@ header h1 {
 
 img {
   border: 2px solid #ffffffc4;
-  /*
-  mask-image: radial-gradient(ellipse, #ffffff 80%, #ffffff00 100%);
-  */
 }
 
 #content {
